@@ -20,3 +20,6 @@ SELECT pedidos.estado , pedidos.cliente_id , pedidos.fecha_pedido , detalles_ped
 FROM pedidos
 JOIN detalles_pedidos ON pedidos.pedido_id = detalles_pedidos.pedido_id
 WHERE pedidos.estado = 'Pendiente';
+
+SELECT nombre, precio FROM productos
+WHERE precio = (SELECT MAX(precio) FROM productos);
