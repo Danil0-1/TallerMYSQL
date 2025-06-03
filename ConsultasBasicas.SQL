@@ -27,3 +27,5 @@ WHERE precio = (SELECT MAX(precio) FROM productos);
 SELECT cliente_id , COUNT(*) FROM pedidos GROUP BY cliente_id;
 
 SELECT  AVG(salario) FROM empleados;
+
+SELECT categoria, COUNT(*) FROM productos GROUP BY categoria;
