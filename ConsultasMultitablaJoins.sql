@@ -41,3 +41,15 @@ SELECT
 FROM empleados
 LEFT JOIN pedidos
 ON empleados.empleado_id = pedidos.empleado_id;
+
+SELECT
+    empleados.empleado_id,
+    empleados.puesto AS Puesto,
+    empleados.fecha_contratacion AS FechaContratacion,
+    empleados.salario AS Salario,
+    pedidos.fecha_pedido AS FechaPedido,
+    pedidos.estado As Estado
+FROM empleados
+LEFT JOIN pedidos
+ON empleados.empleado_id = pedidos.empleado_id
+WHERE pedidos.fecha_pedido IS NULL AND pedidos.estado IS NULL;
