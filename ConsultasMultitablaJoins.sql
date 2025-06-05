@@ -30,3 +30,14 @@ LEFT JOIN detalles_pedidos
 ON pedidos.pedido_id = detalles_pedidos.pedido_id
 LEFT JOIN productos
 ON detalles_pedidos.producto_id = productos.producto_id;
+
+SELECT
+    empleados.empleado_id,
+    empleados.puesto AS Puesto,
+    empleados.fecha_contratacion AS FechaContratacion,
+    empleados.salario AS Salario,
+    pedidos.fecha_pedido AS FechaPedido,
+    pedidos.estado AS Estado
+FROM empleados
+LEFT JOIN pedidos
+ON empleados.empleado_id = pedidos.empleado_id;
