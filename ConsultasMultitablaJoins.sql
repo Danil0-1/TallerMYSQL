@@ -112,3 +112,10 @@ FROM productos
 JOIN proveedores_productos
     ON productos.producto_id = proveedores_productos.producto_id
 GROUP BY productos.nombre;
+
+SELECT 
+    productos.nombre AS Producto
+FROM productos
+JOIN proveedores_productos
+    ON productos.producto_id = proveedores_productos.producto_id
+WHERE proveedores_productos.proveedor_id = 3;
