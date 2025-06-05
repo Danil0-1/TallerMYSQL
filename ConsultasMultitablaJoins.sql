@@ -62,3 +62,7 @@ FROM pedidos
 JOIN detalles_pedidos
 ON pedidos.pedido_id = detalles_pedidos.pedido_id
 GROUP BY pedidos.pedido_id, pedidos.fecha_pedido;
+
+SELECT *
+FROM usuarios
+CROSS JOIN productos;
