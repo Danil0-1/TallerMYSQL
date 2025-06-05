@@ -73,3 +73,15 @@ SELECT
 FROM usuarios
 LEFT JOIN pedidos
 ON usuarios.usuario_id = pedidos.cliente_id;
+
+SELECT
+    proveedores.nombre AS Proveedor,
+    productos.nombre AS Producto,
+    productos.categoria AS Categoria,
+    productos.precio AS Precio
+FROM proveedores
+JOIN proveedores_productos
+    ON proveedores.proveedor_id = proveedores_productos.proveedor_id
+JOIN productos
+    ON proveedores_productos.producto_id = productos.producto_id
+WHERE productos.nombre = 'Laptop';
