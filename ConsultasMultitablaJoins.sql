@@ -66,3 +66,10 @@ GROUP BY pedidos.pedido_id, pedidos.fecha_pedido;
 SELECT *
 FROM usuarios
 CROSS JOIN productos;
+
+SELECT
+    usuarios.nombre AS Nombre,
+    pedidos.estado AS Estado
+FROM usuarios
+LEFT JOIN pedidos
+ON usuarios.usuario_id = pedidos.cliente_id;
