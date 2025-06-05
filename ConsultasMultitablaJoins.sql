@@ -127,3 +127,12 @@ FROM proveedores
 JOIN proveedores_productos
     ON proveedores.proveedor_id = proveedores_productos.proveedor_id
 WHERE proveedores_productos.producto_id = 1;
+
+SELECT 
+    productos.producto_id,
+    productos.nombre AS Producto,
+    COUNT(proveedores_productos.proveedor_id) AS cantidad_proveedores
+FROM productos
+JOIN proveedores_productos
+    ON productos.producto_id = proveedores_productos.producto_id
+GROUP BY productos.producto_id, productos.nombre;
