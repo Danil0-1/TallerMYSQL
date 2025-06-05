@@ -119,3 +119,11 @@ FROM productos
 JOIN proveedores_productos
     ON productos.producto_id = proveedores_productos.producto_id
 WHERE proveedores_productos.proveedor_id = 3;
+
+SELECT 
+    proveedores.nombre AS Proveedor,
+    proveedores.telefono AS Telefono
+FROM proveedores
+JOIN proveedores_productos
+    ON proveedores.proveedor_id = proveedores_productos.proveedor_id
+WHERE proveedores_productos.producto_id = 1;
